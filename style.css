@@ -1,0 +1,144 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+h1 {
+    color: rgb(21, 21, 100);
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+h3 {
+    justify-self: center;
+    text-align: center;
+    color: gray;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 1fr;
+
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    justify-content: center;
+    align-content: center;
+}
+
+.book-btn {
+    border: none;
+    border-radius: 50px;
+    background-color: orange;
+    color: white;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: large;
+    transition: background-color 0.5s;
+
+}
+.book-btn:hover{
+    background-color: orangered;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+        "dishes dishes dish-1 dish-2"
+        "dishes dishes dish-3 dish-4";
+    gap: 5px;
+    justify-items: center;
+}
+
+.dishes {
+    grid-area: dishes;
+}
+
+.dish-1 {
+    grid-area: dish-1;
+}
+
+.dish-2 {
+    grid-area: dish-2;
+}
+
+.dish-3 {
+    grid-area: dish-3;
+}
+
+.dish-4 {
+    grid-area: dish-4;
+}
+
+.dishes-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.dishes-img:hover{
+    transform: scale(1.02);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.menu-img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(247, 212, 218);
+    border-radius: 0 20px 0 20px;
+    cursor: pointer;
+}
+.menu-img:hover{
+    transform:translateY(-20px); 
+}
+
+.heart-icon {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+}
+
+@media screen and (max-width:768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        grid-template-areas:
+            "dishes dishes"
+            "dishes dishes"
+            "dish-1 dish-2"
+            "dish-3 dish-4";
+        gap: 5px;
+        justify-items: center;
+    }
+
+    .menu-container{
+        grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+        justify-content: center;
+    }
+
+}
